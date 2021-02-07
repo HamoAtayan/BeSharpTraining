@@ -14,7 +14,7 @@ public class InitDriverWithManager {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver(new ChromeOptions().addArguments("--start-maximized"));
         driver.get("https://www.sas.am/");
-        Thread.sleep(2000);
+        Thread.sleep(4000);
         String text = driver.findElement(By.cssSelector("[class='item-menu__link item-menu_2 item-menu_id_ ']")).getAttribute("style");
         System.out.println(text);
     }
