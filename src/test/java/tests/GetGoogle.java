@@ -13,7 +13,7 @@ public class GetGoogle extends BaseTest {
     void getGooglePage() throws InterruptedException {
         getDriver().get("https://www.google.com/");
         Thread.sleep(2000);
-        getDriver().findElement(By.cssSelector("body > div.L3eUgb > div.o3j99.ikrT4e.om7nvf > form > div:nth-child(2) > div.A8SBwf > div.RNNXgb > div > div.a4bIc > input")).sendKeys("Java Shildt", Keys.ENTER);
+        getDriver().findElement(By.cssSelector("input[title='Search']")).sendKeys("Java Shildt", Keys.ENTER);
         Thread.sleep(3000);
         scrollDown();
         Thread.sleep(3000);
