@@ -6,12 +6,10 @@ package questions;
 public class Main {
     public static void main(String[] args) {
         B b = new B() {
-            @Override
             public void go() {
                 System.out.println("b");
             }
         };
         b.go();
     }
-
 }
