@@ -1,5 +1,6 @@
 package tests;
 
+import helpers.DriverSetup;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -27,7 +28,7 @@ public class BaseTest {
 
     @BeforeClass
     public void setupBase() {
-        getDriver();
+        driver = new DriverSetup().initDriver();
     }
 
     @AfterClass

@@ -17,14 +17,14 @@ public class DriverSetup {
         String browser = Config.get("driver");
         switch (browser) {
             case "chrome": {
-                if (driver == null) {
+                if (null == driver) {
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(new ChromeOptions().addArguments("--start-maximized"));
                     break;
                 }
             }
             case "firefox": {
-                if (driver == null) {
+                if (null == driver) {
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();
                     driver.manage().window().maximize();

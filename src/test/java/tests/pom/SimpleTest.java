@@ -13,8 +13,6 @@ public class SimpleTest extends BaseTest {
     public void getSimpleFormDemoPage() throws InterruptedException {
         SimpleFormDemoPage simpleFormDemoPage = new SimpleFormDemoPage(getDriver(), "https://www.seleniumeasy.com");
         simpleFormDemoPage.get();
-        Thread.sleep(2000);
         simpleFormDemoPage.setMessageInput("barev es text em ");
-        Thread.sleep(4000);
     }
 }
