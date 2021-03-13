@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import utils.Config;
 
 /**
@@ -30,6 +31,12 @@ public class DriverSetup {
                     driver.manage().window().maximize();
                     break;
                 }
+            }
+
+            case "remote": {
+                WebDriverManager.chromedriver().setup();
+                driver = new RemoteWebDriver(new ChromeOptions().addArguments("--start-maximized"));
+                break;
             }
             default: {
                 if (null == driver) {

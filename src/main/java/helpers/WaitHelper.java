@@ -42,11 +42,6 @@ public class WaitHelper {
         wait.until(visibilityOf(element));
     }
 
-    public static void waitForVisibilityOfElement2(WebDriver driver, WebElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, TIMEOUT);
-        wait.until(visibilityOf(element));
-    }
-
     private static void waitUntilJSReady(WebDriver driver) {
         try {
             String readyState = "return document.readyState";

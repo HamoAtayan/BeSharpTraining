@@ -2,11 +2,12 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import page.SimpleFormDemoPage;
 
 /**
  * Created by Hmayak Atayan on  10, Feb, 2021
  */
-public class SimpleTest {
+public class SimpleTest extends BaseTest {
     @Test(priority = 1)
     void firstTest() {
         System.out.println("first test");
@@ -14,6 +15,8 @@ public class SimpleTest {
 
     @Test()
     void secondTest() {
+        SimpleFormDemoPage sm = new SimpleFormDemoPage(getDriver(),"aaaa");
+        sm.setMessageInput("my message");
         System.out.println("second test");
         Assert.assertEquals(10,10,"tvery havasar chen");
     }

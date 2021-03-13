@@ -35,9 +35,8 @@ public class SimpleFormDemoPage extends BasePage<SimpleFormDemoPage> {
         return input.getAttribute("method");
     }
 
-    public void seetLogin(String input) {
+    public void setLogin(String input) {
         WaitHelper.waitForVisibilityOfElement(getDriver(), this.input);
         this.input.sendKeys(input);
     }
-
 }
