@@ -5,5 +5,5 @@ package questions;
  */
 public class MyException extends Exception {
 
-
+    int number = 10;
 }
