@@ -1,4 +1,4 @@
-package tests;
+package tests.tests;
 
 import helpers.DriverSetup;
 import io.github.bonigarcia.wdm.WebDriverManager;

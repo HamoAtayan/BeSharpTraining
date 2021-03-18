@@ -1,4 +1,4 @@
-package tests;
+package tests.tests;
 
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.*;

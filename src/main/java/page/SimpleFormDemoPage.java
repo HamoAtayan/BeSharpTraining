@@ -20,14 +20,16 @@ public class SimpleFormDemoPage extends BasePage<SimpleFormDemoPage> {
         super(driver, serverUrl, "/test/basic-first-form-demo.html");
     }
 
-    public void setMessageInput(String message) {
+    public SimpleFormDemoPage setMessageInput(String message) {
         messageInput.sendKeys(message);
+        return this;
     }
 
-    public void clickMessageInput() {
+    public SimpleFormDemoPage clickMessageInput() {
         WaitHelper.waitForElementToBeClickable(getDriver(), messageInput);
         messageInput.click();
         switchFocusOnNewTab();
+        return this;
     }
 
     public String getID() {
@@ -35,8 +37,9 @@ public class SimpleFormDemoPage extends BasePage<SimpleFormDemoPage> {
         return input.getAttribute("method");
     }
 
-    public void setLogin(String input) {
+    public SimpleFormDemoPage setLogin(String input) {
         WaitHelper.waitForVisibilityOfElement(getDriver(), this.input);
         this.input.sendKeys(input);
+        return this;
     }
 }
