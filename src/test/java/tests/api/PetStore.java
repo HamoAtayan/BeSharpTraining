@@ -1,12 +1,10 @@
 package tests.api;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pojos.Pet;
 import requests.PetStoreRequests;
-import utils.HUman;
-
-import static io.restassured.RestAssured.given;
 
 /**
  * Created by Hmayak Atayan on  17, Mar, 2021
@@ -14,6 +12,8 @@ import static io.restassured.RestAssured.given;
 public class PetStore {
     String id = "1";
     Pet pet;
+    //Mard mard;
+//    mard =  new Mard(28,Anun, azganun);
 
 //    @Test
 //    public void getByID() {

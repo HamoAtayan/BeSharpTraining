@@ -28,6 +28,5 @@ public class PetStoreRequests {
                 .body(pet)
                 .when()
                 .post("https://petstore.swagger.io/v2/pet");
-
     }
 }
